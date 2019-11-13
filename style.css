@@ -1,0 +1,122 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background: #ffffff;
+    font-weight: bold;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-shadow: 0px 10px 5px -3px #000000;
+}
+.header__title {
+    width: 65vw;
+    font-size: 18px;
+}
+
+
+.main {
+    display: flex;
+}
+.main__instruments-panel {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    flex-shrink: 0;
+    padding-top: 60px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.main__instrument-block {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 1px 1px 15px -2px rgba(180, 180, 180, 1);
+    margin-bottom: 40px;
+}
+.main__instrument-block-item {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    font-size: 16px;
+    padding: 0 20px 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.main__instrument-block-item:hover,
+.main__instrument-block-item:active {
+    background: #eee;
+}
+.main__instrument-block-item-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+.main__instrument-block-item-icon-paint-bucket {
+    background: url('./asset/paint-bucket-icon.svg') 0 0 no-repeat;
+}
+
+.main__instrument-block-item-icon-choose-color {
+    background: url('./asset/choose-color-icon.svg') 0 0 no-repeat;
+}
+
+.main__instrument-block-item-icon-move {
+    background: url('./asset/move-icon.svg') 0 0 no-repeat;
+}
+
+.main__instrument-block-item-icon-transform {
+    background: url('./asset/transform-icon.svg') 0 0 no-repeat;
+}
+.main__instrument-block-item-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.main__instrument-block-item-color-current {
+    background: #c4c4c4;
+}
+
+.main__instrument-block-item-color-prev {
+    background: #41f795;
+}
+
+.main__instrument-block-item-color-red {
+    background: #f74141;
+}
+
+.main__instrument-block-item-color-blue {
+    background: #41b6f7;
+}
+
+
+.main__canvas-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.main__canvas-block {
+    width: 512px;
+    height: 512px;
+    background-color: #ffffff;
+}
+
+.main__switcher-size-block{
+    display: flex;
+}
+.main__instrument-switcher-size-item-icon {
+    width: 15px;
+    height: 15px;
+    border: 4px inset black;
+    margin-right: 30%;
+}

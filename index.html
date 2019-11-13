@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>codejam-canvas</title>
+</head>
+
+<body>
+    <!-- ---------------------------------header----------------------------------- -->
+<header class="header">
+        <img class="header__nav" src="asset/nav-icon.svg" alt="line">
+        <h1 class="header__title">CodeJam-Canvas</h1>
+        <img class="header__menu" src="asset/menu-icon.svg" alt="dot">
+</header>
+
+    <!-- ---------------------------------main----------------------------------- -->
+ <main class="main">
+    <div class="main__instruments-panel">
+        <div class="main__instrument-block">
+            <div class="main__instrument-block-items">
+                <a href="#" class="main__instrument-block-item">
+                    <span class="main__instrument-block-item-icon main__instrument-block-item-icon-paint-bucket"></span>
+                    Paint bucket (A)
+                </a>
+                <a href="#" class="main__instrument-block-item">
+                    <span class="main__instrument-block-item-icon main__instrument-block-item-icon-choose-color"></span>
+                    Choose color (S)
+                </a>
+                <a href="#" class="main__instrument-block-item">
+                    <span class="main__instrument-block-item-icon main__instrument-block-item-icon-move"></span>
+                    Move (D)
+                </a>
+                <a href="#" class="main__instrument-block-item">
+                    <span class="main__instrument-block-item-icon main__instrument-block-item-icon-transform"></span>
+                    Transform (F)
+                </a>
+            </div>
+        </div>
+
+        <div class="main__instrument-block">
+            <div class="main__instrument-block-items">
+                <a href="#" class="main__instrument-block-item">
+                    <span class="main__instrument-block-item-color main__instrument-block-item-color-current"></span>
+                    Current color
+                </a>
+                <a href="#" class="main__instrument-block-item">
+                    <span class="main__instrument-block-item-color main__instrument-block-item-color-prev"></span>
+                    Prev color
+                </a>
+                <a href="#" class="main__instrument-block-item">
+                    <span class="main__instrument-block-item-color main__instrument-block-item-color-red"></span>
+                    red
+                </a>
+                <a href="#" class="main__instrument-block-item">
+                    <span class="main__instrument-block-item-color main__instrument-block-item-color-blue"></span>
+                    blue
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main__canvas-wrapper">
+        <canvas class="main__canvas-block" id='canvas' width="512" height="512"></canvas>
+    </div>
+
+    <div class="main__instruments-panel">
+        <div class="main__switcher-size-block main__instrument-block">
+            <div class="main__instrument-block-items">
+                <a href="#"  data-file="./data/4x4.json" id='button1' data-type="json" class="main__instrument-switcher-size-item main__instrument-block-item">
+                    <span class="main__instrument-switcher-size-item-icon"></span>
+                    4x4
+                </a>
+                <a href="#"  data-file="./data/32x32.json" id='button2' data-type="json" class="main__instrument-switcher-size-item main__instrument-block-item">
+                    <span class="main__instrument-switcher-size-item-icon"></span>
+                    32x32
+                </a>
+                <a href="#" data-file="./data/image.png" id='button3' data-type="bloc" class="main__instrument-switcher-size-item main__instrument-block-item">
+                    <span class="main__instrument-switcher-size-item-icon"></span>
+                    256x256
+                </a>
+            </div>
+        </div>
+    </div>
+</main> 
+<script src="./script.js"></script>
+</body>
+</html>
