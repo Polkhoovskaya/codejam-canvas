@@ -73,27 +73,30 @@
 .main__instrument-block-item-icon-transform {
     background: url('./asset/transform-icon.svg') 0 0 no-repeat;
 }
-.main__instrument-block-item-color {
-    display: inline-block;
+
+.main__instrument-block-item-color::before {
+    content:"";
     width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 15px;
+	height: 20px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-right: 10px;
 }
 
-.main__instrument-block-item-color-current {
+.main__instrument-block-item-color-current::before {
     background: #c4c4c4;
 }
 
-.main__instrument-block-item-color-prev {
+.main__instrument-block-item-color-prev::before {
     background: #41f795;
 }
 
-.main__instrument-block-item-color-first {
+.main__instrument-block-item-color-first::before {
     background: #f74141;
 }
 
-.main__instrument-block-item-color-second {
+.main__instrument-block-item-color-second::before {
     background: #41b6f7;
 }
 
