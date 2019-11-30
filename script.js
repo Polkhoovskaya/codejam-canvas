@@ -1,13 +1,13 @@
 'use strict';
 
 
-let canvasImj1 = './data/4x4.json';
-let canvasImj2 = './data/32x32.json';
-let logoUrl = './data/image.png';
+const CANVAS_IMG1 = './data/4x4.json';
+const CANVAS_IMG2 = './data/32x32.json';
+const LOGO_URL = './data/image.png';
 let canvas1 = [];
 let canvas2 = [];
 
-fetch(canvasImj1).then(response => {
+fetch(CANVAS_IMG1).then(response => {
   return response.json();
 }).then(data => {
   canvas1 = data;
@@ -15,7 +15,7 @@ fetch(canvasImj1).then(response => {
   console.log('The request failed!'); 
 });
 
-fetch(canvasImj2).then(response => {
+fetch(CANVAS_IMG2).then(response => {
   return response.json();
 }).then(data => {
   canvas2 = data;
@@ -66,7 +66,7 @@ let addImg = () => {
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext('2d');
     let image = new Image();
-    image.src = logoUrl;
+    image.src = LOGO_URL;
     image.onload = function(){
         ctx.drawImage(image, 0, 0, 512, 512);
     }
