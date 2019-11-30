@@ -23,7 +23,7 @@ fetch(CANVAS_IMG2).then(response => {
   console.log('The request failed!'); 
 });
 
-let addCanvas1 = () => {
+let addCanvas1Data = () => {
  
 
     let canvas = document.getElementById('canvas');
@@ -36,14 +36,14 @@ let addCanvas1 = () => {
     canvas.height = height * scale;
 
     // Loop through each color and draw that section
-    for(var row = 0; row < height; row++) {
-        for(var col = 0; col < width; col++) { // Since there are nested arrays we need two for loops
-            ctx.fillStyle = '#' + canvas1[row][col]; // Set the color to the one specified
-            ctx.fillRect(col * scale, row * scale, scale, scale); // Actually draw the rectangle
+    for(let row = 0; row < height; row++) {
+        for(let col = 0; col < width; col++) { 
+            ctx.fillStyle = '#' + canvas1[row][col]; 
+            ctx.fillRect(col * scale, row * scale, scale, scale); 
         }
     }
   }
-let addCanvas2 = () => {
+let addCanvas2Data = () => {
 
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext('2d');
@@ -55,10 +55,10 @@ let addCanvas2 = () => {
     canvas.height = height * scale;
 
     // Loop through each color and draw that section
-    for(var row = 0; row < height; row++) {
-        for(var col = 0; col < width; col++) { // Since there are nested arrays we need two for loops
-            ctx.fillStyle = 'rgba(' + canvas2[row][col][0] + ',' + canvas2[row][col][1]+ ',' + canvas2[row][col][2] + ',' +  canvas2[row][col][3] + ')'; // Set the color to the one specified
-            ctx.fillRect(col * scale, row * scale, scale, scale); // Actually draw the rectangle
+    for(let row = 0; row < height; row++) {
+        for(let col = 0; col < width; col++) { 
+            ctx.fillStyle = 'rgba(' + canvas2[row][col][0] + ',' + canvas2[row][col][1]+ ',' + canvas2[row][col][2] + ',' +  canvas2[row][col][3] + ')'; 
+            ctx.fillRect(col * scale, row * scale, scale, scale); 
         }
     }
 }
@@ -73,10 +73,10 @@ let addImg = () => {
 }
 
 let button1 = document.getElementById('button1');
-button1.onclick = addCanvas1;
+button1.onclick = addCanvas1Data;
 
 let button2 = document.getElementById('button2');
-button2.onclick = addCanvas2;
+button2.onclick = addCanvas2Data;
 
 let button3 = document.getElementById('button3');
 button3.onclick = addImg;
